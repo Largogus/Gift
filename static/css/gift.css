@@ -1,0 +1,162 @@
+* {
+    font-family: "Dela Gothic One", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #e170b6;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+    overflow: hidden;
+}
+
+h1 {
+    font-size: 4rem;
+    color: black;
+    margin: 0;
+    padding: 10px;
+}
+
+#div-gift {
+    width: 100vw;
+    max-width: 800px;
+    background-color: #d35da6;
+    border-radius: 20px;
+    margin: 20px 0;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+#text-gift {
+    font-size: 1.5rem;
+    color: black;
+    line-height: 1.5;
+    margin: 0;
+}
+
+.btn-footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 40px;
+    padding: 0 10px;
+}
+
+#btn-1, #btn-2, #btn-3 {
+    background-color: #d162a7
+}
+
+.btn-menu {
+    background-color: #ff6347;
+    color: black;
+    border: 2px solid #c45198;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    outline: none;
+}
+
+@keyframes slideme {
+    0% {
+        left: -30px;
+        margin-left: 0px;
+    }
+    30% {
+        left: 110%;
+        margin-left: 80px;
+    }
+    100% {
+        left: 110%;
+        margin-left: 80px;
+    }
+}
+
+.btn-menu:after {
+    content: "";
+    display: block;
+    width: 30px;
+    height: 200px;
+    margin-left: 60px;
+    background: #fff;
+    opacity: 0.5;
+    position: absolute;
+    left: -40px;
+    top: -100px;
+    z-index: 1;
+    transform: rotate(45deg);
+    transition: all 0.1s;
+    animation-name: slideme;
+    animation-duration: 3s;
+    animation-delay: 0.05s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+
+.btn-menu:hover {
+    box-shadow: none;
+    position: relative;
+    top: 10px;
+}
+
+.btn-menu:active {
+    transform: translateY(-5px);
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 3rem;
+        padding: 5px;
+    }
+
+    #div-gift {
+        width: 95%;
+        padding: 15px;
+    }
+
+    #text-gift {
+        font-size: 1.2rem;
+    }
+
+    .btn-menu {
+        width: 30vw;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2rem;
+        padding: 5px;
+    }
+
+    #div-gift {
+        width: 100%;
+        padding: 10px;
+    }
+
+    #text-gift {
+        font-size: 1rem;
+    }
+
+    .btn-menu {
+        width: 40vw;
+        font-size: 0.8rem;
+    }
+    }

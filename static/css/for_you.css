@@ -1,0 +1,49 @@
+* {
+    font-family: "Dela Gothic One", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+}
+
+body {
+    background-color: #e170b6;
+    position: relative;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.main-container {
+    display: flex;
+    justify-content: center;
+    object-fit: cover;
+}
+
+#text1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 15vh;
+    width: 50vw;
+    font-size: 1.5rem;
+    background-color: #b35790;
+    border: 2.5px solid #a64c84;
+    border-radius: 15px;
+    box-shadow: 0 0 20px 10px rgba(209, 42, 146, 3);
+    margin: auto;
+}
+
+@media (max-width: 435px) {
+    #text1 {
+        width: 80vw;
+        font-size: 1.25rem;
+    }
+}
+
+@media (max-width: 260px) {
+    #text1 {
+        width: 80vw;
+        font-size: 1rem;
+    }
+}
