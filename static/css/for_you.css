@@ -9,7 +9,6 @@
 body {
     background-color: #e170b6;
     position: relative;
-    height: 100vh;
     display: flex;
     flex-direction: column;
 }
@@ -17,10 +16,15 @@ body {
 .main-container {
     display: flex;
     justify-content: center;
-    object-fit: cover;
 }
 
-#text1 {
+#image {
+    max-width: 100%;
+    object-fit: cover;
+    margin-bottom: 50px;
+}
+
+.text {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -32,17 +36,92 @@ body {
     border-radius: 15px;
     box-shadow: 0 0 20px 10px rgba(209, 42, 146, 3);
     margin: auto;
+    margin-bottom: 50px;
 }
 
+.footers {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0 10px;
+}
+
+#btn-1, #btn-2{
+    background-color: #d162a7;
+    outline: none;
+    touch-action: manipulation;
+}
+
+.btn-random {
+    color: black;
+    border: 2px solid #c45198;
+    margin: auto;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+@keyframes slideme {
+    0% {
+        left: -30px;
+        margin-left: 0px;
+    }
+    30% {
+        left: 110%;
+        margin-left: 80px;
+    }
+    100% {
+        left: 110%;
+        margin-left: 80px;
+    }
+}
+
+.btn-random:after {
+    content: "";
+    display: block;
+    width: 30px;
+    height: 200px;
+    margin-left: 60px;
+    background: #fff;
+    opacity: 0.5;
+    position: absolute;
+    left: -40px;
+    top: -100px;
+    z-index: 1;
+    transform: rotate(45deg);
+    transition: all 0.1s;
+    animation-name: slideme;
+    animation-duration: 3s;
+    animation-delay: 0.05s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    transform: none;
+}
+
+.btn-random:hover {
+    box-shadow: none;
+    position: relative;
+    top: 10px;
+}
+
+.btn-random:active {
+    transform: translateY(-5px);
+}
+
+
 @media (max-width: 435px) {
-    #text1 {
+    .text {
         width: 80vw;
-        font-size: 1.25rem;
+        font-size: 1.15rem;
     }
 }
 
 @media (max-width: 260px) {
-    #text1 {
+    .text {
         width: 80vw;
         font-size: 1rem;
     }
